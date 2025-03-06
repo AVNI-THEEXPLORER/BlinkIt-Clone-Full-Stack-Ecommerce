@@ -93,22 +93,23 @@ const UploadSubCategoryModel = ({close, fetchData}) => {
             </div>
             <form className='my-3 grid gap-3' onSubmit={handleSubmitSubCategory}>
                     <div className='grid gap-1'>
-                        <label htmlFor='name'>Name</label>
+                        <label htmlFor='name'
+                        className='font-normal'>Name</label>
                         <input 
                             id='name'
                             name='name'
                             value={subCategoryData.name}
                             onChange={handleChange}
-                            className='p-3 bg-blue-50 border outline-none focus-within:border-primary-200 rounded '
+                            className='p-3 bg-blue-50 border outline-none focus-within:border-primary-200 rounded font-normal '
                         />
                     </div>
                     <div className='grid gap-1'>
-                        <p>Image</p>
+                        <p className='font-normal'>Image</p>
                         <div className='flex flex-col lg:flex-row items-center gap-3'>
                             <div className='border h-36 w-full lg:w-36 bg-blue-50 flex items-center justify-center'>
                                 {
                                     !subCategoryData.image ? (
-                                        <p className='text-sm text-neutral-400'>No Image</p>
+                                        <p className='text-sm text-neutral-400 font-normal'>No Image</p>
                                     ) : (
                                         <img
                                             alt='subCategory'
@@ -119,7 +120,7 @@ const UploadSubCategoryModel = ({close, fetchData}) => {
                                 }
                             </div>
                             <label htmlFor='uploadSubCategoryImage'>
-                                <div className='px-4 py-1 border border-primary-100 text-primary-200 rounded hover:bg-primary-200 hover:text-neutral-900 cursor-pointer  '>
+                                <div className='px-4 py-1 border border-primary-100 text-primary-200 rounded hover:bg-primary-200 hover:text-neutral-900 cursor-pointer font-normal '>
                                     Upload Image
                                 </div>
                                 <input 
@@ -133,7 +134,7 @@ const UploadSubCategoryModel = ({close, fetchData}) => {
                         </div>
                     </div>
                     <div className='grid gap-1'>
-                        <label>Select Category</label>
+                        <label className='font-normal'>Select Category</label>
                         <div className='border focus-within:border-primary-200 rounded'>
                             {/*display value**/}
                             <div className='flex flex-wrap gap-2'>
@@ -153,7 +154,7 @@ const UploadSubCategoryModel = ({close, fetchData}) => {
 
                             {/*select category**/}
                             <select
-                                className='w-full p-2 bg-transparent outline-none border'
+                                className='w-full p-2 bg-transparent outline-none border font-normal'
                                 onChange={(e)=>{
                                     const value = e.target.value
                                     const categoryDetails = allCategory.find(el => el._id == value)

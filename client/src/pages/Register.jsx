@@ -32,10 +32,10 @@ const Register = () => {
     const valideValue = Object.values(data).every(el => el)
 
 
-    const handleSubmit = async(e)=>{
+    const handleSubmit = async (e) => {
         e.preventDefault()
 
-        if(data.password !== data.confirmPassword){
+        if (data.password !== data.confirmPassword) {
             toast.error(
                 "password and confirm password must be same"
             )
@@ -45,20 +45,20 @@ const Register = () => {
         try {
             const response = await Axios({
                 ...SummaryApi.register,
-                data : data
+                data: data
             })
-            
-            if(response.data.error){
+
+            if (response.data.error) {
                 toast.error(response.data.message)
             }
 
-            if(response.data.success){
+            if (response.data.success) {
                 toast.success(response.data.message)
                 setData({
-                    name : "",
-                    email : "",
-                    password : "",
-                    confirmPassword : ""
+                    name: "",
+                    email: "",
+                    password: "",
+                    confirmPassword: ""
                 })
                 navigate("/login")
             }
@@ -73,16 +73,18 @@ const Register = () => {
     return (
         <section className='w-full container mx-auto px-2'>
             <div className='bg-white my-4 w-full max-w-lg mx-auto rounded p-7'>
-                <p>Welcome to Binkeyit</p>
+                <p className='font-bold text-2xl'>
+                    Welcome to <span className='text-orange-400'>Grocery</span> <span className='text-green-500'>Store</span>
+                </p>
 
                 <form className='grid gap-4 mt-6' onSubmit={handleSubmit}>
                     <div className='grid gap-1'>
-                        <label htmlFor='name'>Name :</label>
+                        <label htmlFor='name' className='font-normal'>Name :</label>
                         <input
                             type='text'
                             id='name'
                             autoFocus
-                            className='bg-blue-50 p-2 border rounded outline-none focus:border-primary-200'
+                            className='bg-blue-50 p-2 border rounded outline-none focus:border-primary-200 font-normal'
                             name='name'
                             value={data.name}
                             onChange={handleChange}
@@ -90,11 +92,11 @@ const Register = () => {
                         />
                     </div>
                     <div className='grid gap-1'>
-                        <label htmlFor='email'>Email :</label>
+                        <label htmlFor='email' className='font-normal'>Email :</label>
                         <input
                             type='email'
                             id='email'
-                            className='bg-blue-50 p-2 border rounded outline-none focus:border-primary-200'
+                            className='bg-blue-50 p-2 border rounded outline-none focus:border-primary-200 font-normal'
                             name='email'
                             value={data.email}
                             onChange={handleChange}
@@ -102,12 +104,12 @@ const Register = () => {
                         />
                     </div>
                     <div className='grid gap-1'>
-                        <label htmlFor='password'>Password :</label>
+                        <label htmlFor='password' className='font-normal'>Password :</label>
                         <div className='bg-blue-50 p-2 border rounded flex items-center focus-within:border-primary-200'>
                             <input
                                 type={showPassword ? "text" : "password"}
                                 id='password'
-                                className='w-full outline-none'
+                                className='w-full outline-none font-normal'
                                 name='password'
                                 value={data.password}
                                 onChange={handleChange}
@@ -125,12 +127,12 @@ const Register = () => {
                         </div>
                     </div>
                     <div className='grid gap-1'>
-                        <label htmlFor='confirmPassword'>Confirm Password :</label>
+                        <label htmlFor='confirmPassword' className='font-normal'>Confirm Password :</label>
                         <div className='bg-blue-50 p-2 border rounded flex items-center focus-within:border-primary-200'>
                             <input
                                 type={showConfirmPassword ? "text" : "password"}
                                 id='confirmPassword'
-                                className='w-full outline-none'
+                                className='w-full outline-none font-normal'
                                 name='confirmPassword'
                                 value={data.confirmPassword}
                                 onChange={handleChange}
@@ -148,12 +150,12 @@ const Register = () => {
                         </div>
                     </div>
 
-                    <button disabled={!valideValue} className={` ${valideValue ? "bg-green-800 hover:bg-green-700" : "bg-gray-500" }    text-white py-2 rounded font-semibold my-3 tracking-wide`}>Register</button>
+                    <button disabled={!valideValue} className={` ${valideValue ? "bg-green-800 hover:bg-green-700" : "bg-gray-500"}    text-white py-2 rounded font-semibold my-3 tracking-wide`}>Register</button>
 
                 </form>
 
-                <p>
-                    Already have account ? <Link to={"/login"} className='font-semibold text-green-700 hover:text-green-800'>Login</Link>
+                <p className='font-extralight'>
+                    Already have account ? <Link to={"/login"} className='font-semibold hover:text-green-500'>Login</Link>
                 </p>
             </div>
         </section>

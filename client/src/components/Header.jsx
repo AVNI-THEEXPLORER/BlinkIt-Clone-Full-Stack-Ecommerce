@@ -99,7 +99,7 @@ const Header = () => {
                                         {
                                             user?._id ? (
                                                 <div className='relative'>
-                                                    <div onClick={()=>setOpenUserMenu(preve => !preve)} className='flex select-none items-center gap-1 cursor-pointer'>
+                                                    <div onClick={()=>setOpenUserMenu(preve => !preve)} className='flex select-none items-center gap-1 cursor-pointer font-normal'>
                                                         <p>Account</p>
                                                         {
                                                             openUserMenu ? (
@@ -122,7 +122,7 @@ const Header = () => {
                                                     
                                                 </div>
                                             ) : (
-                                                <button onClick={redirectToLoginPage} className='text-lg px-2'>Login</button>
+                                                <button onClick={redirectToLoginPage} className='text-lg px-2 font-normal'>Login</button>
                                             )
                                         }
                                         <button onClick={()=>setOpenCartSection(true)} className='flex items-center gap-2 bg-green-800 hover:bg-green-700 px-3 py-2 rounded text-white'>

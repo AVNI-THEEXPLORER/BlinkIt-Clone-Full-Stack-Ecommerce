@@ -49,27 +49,28 @@ const Search = () => {
             {
                 !isSearchPage ? (
                      //not in search page
-                     <div onClick={redirectToSearchPage} className='w-full h-full flex items-center'>
+                     <div onClick={redirectToSearchPage} className='w-full h-full flex items-center font-normal'>
                         <TypeAnimation
                                 sequence={[
                                     // Same substring at the start will only be typed out once, initially
                                     'Search "milk"',
-                                    1000, // wait 1s before replacing "Mice" with "Hamsters"
+                                    2000, // wait 1s before replacing "Mice" with "Hamsters"
                                     'Search "bread"',
-                                    1000,
+                                    2000,
                                     'Search "sugar"',
-                                    1000,
+                                    2000,
                                     'Search "panner"',
-                                    1000,
+                                    2000,
                                     'Search "chocolate"',
-                                    1000,
+                                    2000,
                                     'Search "curd"',
-                                    1000,
+                                    2000,
                                     'Search "rice"',
-                                    1000,
-                                    'Search "egg"',
-                                    1000,
+                                    2000,
+                                    'Search "juice"',
+                                    2000,
                                     'Search "chips"',
+                                    2000,
                                 ]}
                                 wrapper="span"
                                 speed={50}

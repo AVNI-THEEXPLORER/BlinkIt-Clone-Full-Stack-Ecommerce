@@ -84,8 +84,8 @@ const ProductAdmin = () => {
                   <IoSearchOutline size={25}/>
                   <input
                     type='text'
-                    placeholder='Search product here ...' 
-                    className='h-full w-full  outline-none bg-transparent'
+                    placeholder='Search product here...' 
+                    className='h-full w-full  outline-none bg-transparent font-normal'
                     value={search}
                     onChange={handleOnChange}
                   />
@@ -114,9 +114,9 @@ const ProductAdmin = () => {
             </div>
             
             <div className='flex justify-between my-4'>
-              <button onClick={handlePrevious} className="border border-primary-200 px-4 py-1 hover:bg-primary-200">Previous</button>
+              <button onClick={handlePrevious} className="border border-primary-200 px-4 py-1 hover:bg-primary-200 font-normal">Previous</button>
               <button className='w-full bg-slate-100'>{page}/{totalPageCount}</button>
-              <button onClick={handleNext} className="border border-primary-200 px-4 py-1 hover:bg-primary-200">Next</button>
+              <button onClick={handleNext} className="border border-primary-200 px-4 py-1 hover:bg-primary-200 font-normal">Next</button>
             </div>
 
         </div>

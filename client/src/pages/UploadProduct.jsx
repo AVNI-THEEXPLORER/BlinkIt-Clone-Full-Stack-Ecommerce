@@ -163,7 +163,7 @@ const UploadProduct = () => {
                     value={data.name}
                     onChange={handleChange}
                     required
-                    className='bg-blue-50 p-2 outline-none border focus-within:border-primary-200 rounded'
+                    className='bg-blue-50 p-2 outline-none border focus-within:border-primary-200 rounded font-normal'
                   />
                 </div>
                 <div className='grid gap-1'>
@@ -178,7 +178,7 @@ const UploadProduct = () => {
                     required
                     multiple 
                     rows={3}
-                    className='bg-blue-50 p-2 outline-none border focus-within:border-primary-200 rounded resize-none'
+                    className='bg-blue-50 p-2 outline-none border focus-within:border-primary-200 rounded resize-none font-normal'
                   />
                 </div>
                 <div>
@@ -230,7 +230,7 @@ const UploadProduct = () => {
                   <label className='font-medium'>Category</label>
                   <div>
                     <select
-                      className='bg-blue-50 border w-full p-2 rounded'
+                      className='bg-blue-50 border w-full p-2 rounded font-normal'
                       value={selectCategory}
                       onChange={(e)=>{
                         const value = e.target.value 
@@ -274,7 +274,7 @@ const UploadProduct = () => {
                   <label className='font-medium'>Sub Category</label>
                   <div>
                     <select
-                      className='bg-blue-50 border w-full p-2 rounded'
+                      className='bg-blue-50 border w-full p-2 rounded font-normal'
                       value={selectSubCategory}
                       onChange={(e)=>{
                         const value = e.target.value 
@@ -325,7 +325,7 @@ const UploadProduct = () => {
                     value={data.unit}
                     onChange={handleChange}
                     required
-                    className='bg-blue-50 p-2 outline-none border focus-within:border-primary-200 rounded'
+                    className='bg-blue-50 p-2 outline-none border focus-within:border-primary-200 rounded font-normal'
                   />
                 </div>
 
@@ -339,7 +339,7 @@ const UploadProduct = () => {
                     value={data.stock}
                     onChange={handleChange}
                     required
-                    className='bg-blue-50 p-2 outline-none border focus-within:border-primary-200 rounded'
+                    className='bg-blue-50 p-2 outline-none border focus-within:border-primary-200 rounded font-normal'
                   />
                 </div>
 
@@ -353,7 +353,7 @@ const UploadProduct = () => {
                     value={data.price}
                     onChange={handleChange}
                     required
-                    className='bg-blue-50 p-2 outline-none border focus-within:border-primary-200 rounded'
+                    className='bg-blue-50 p-2 outline-none border focus-within:border-primary-200 rounded font-normal'
                   />
                 </div>
 
@@ -367,7 +367,7 @@ const UploadProduct = () => {
                     value={data.discount}
                     onChange={handleChange}
                     required
-                    className='bg-blue-50 p-2 outline-none border focus-within:border-primary-200 rounded'
+                    className='bg-blue-50 p-2 outline-none border focus-within:border-primary-200 rounded font-normal'
                   />
                 </div>
 
